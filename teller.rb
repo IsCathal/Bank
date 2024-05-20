@@ -36,7 +36,6 @@ user_input_number = gets.to_i
     when 4 
       puts "Enter your account number:"
       user_input_account_number = gets.to_i
-      balance = 0 
       puts "Your current balance is #{accounts[user_input_account_number]}"
       puts
     else
