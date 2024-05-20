@@ -20,6 +20,7 @@ end
 
     users_Array = []
     usercount = 0
+    user_input_number = 5
 
     puts "Welcome to the Simple Banking System! 
     1. Create an account 
@@ -101,3 +102,6 @@ end
     end
     
     puts "Thank you for using the Simple Banking System. Goodbye!"
+
+
+    
