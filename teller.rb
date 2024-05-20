@@ -23,21 +23,27 @@ user_input_number = gets.to_i
       user_input_account_number = gets.to_i
       puts "Enter the amount to deposit" 
       deposit = gets.to_i
-      accounts[user_input_account_number] += deposit
-      puts
+      if accounts.include?(user_input_account_number)
+        accounts[user_input_account_number] += deposit
+      end
+       puts
     when 3
       puts "Enter your account number:"
       user_input_account_number = gets.to_i
       puts "Enter the amount to withdraw" 
       deposit = gets.to_i
-      accounts[user_input_account_number] -= deposit
-      puts "#{deposit} has been withdrawn into your account"
-      puts
+      if accounts.include?(user_input_account_number)
+        accounts[user_input_account_number] -= deposit
+        puts "#{deposit} has been withdrawn into your account"
+        puts
+      end
     when 4 
       puts "Enter your account number:"
       user_input_account_number = gets.to_i
-      puts "Your current balance is #{accounts[user_input_account_number]}"
-      puts
+      if accounts.include?(user_input_account_number)
+        puts "Your current balance is #{accounts[user_input_account_number]}"
+        puts
+      end
     else
         puts  "Error, Please enter Number between 1 and 5"
         puts
